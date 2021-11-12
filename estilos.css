@@ -5,7 +5,7 @@
 }
 
 body {
-	background: #f3f3f3;
+	background: #b5b5b5;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -33,7 +33,7 @@ header .logo {
 }
 
 header .logo p {
-	color: #9B9B9B;
+	color: #2d2d2d;
 }
 
 header form {
@@ -62,7 +62,7 @@ header .categorias {
 }
 
 header .categorias a {
-	color: #9B9B9B;
+	color: #474747;
 	margin: 10px 20px;
 	font-size: 18px;
 	font-weight: 700;
@@ -70,6 +70,7 @@ header .categorias a {
 
 header .categorias a.activo {
 	color: #000;
+	font-size: 20px;
 }
 
 /* ------------------------- */
@@ -192,6 +193,9 @@ footer .contenedor-icono:hover a {
 	animation: icono .5s ease;
 }
 
+
+/* Efecto de giro de los íconos de las redes sociales */
+
 @keyframes icono {
 	from {
 		transform: rotate3d(0,0,0,0);
@@ -205,7 +209,7 @@ footer .creado-por {
 	margin-bottom: 40px;
 	text-align: center;
 	font-size: 14px;
-	color: #c13584;
+	color: #2f17df;
 }
 
 footer .creado-por a {color: #000;}

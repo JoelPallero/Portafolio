@@ -1,14 +1,22 @@
+//Acá agregamos una constante para instanciar Muuri(librería de animaciones y grillas)
+//y la inicializamos.
+//Las clases "grid" son las que esta función va a utilizar.
+//Solo se va a utilizar la propiedad layour para comodar 
+// los elementos y el valor roundin para indicar cómo medir cada elemento.
 const grid = new Muuri('.grid', {
-	layout: {
+	layout: {	
 		rounding: false
 	}
 });
+
+//Voy haciendo que js espere cada evento, cosa que haga algo cuando suceda y no
+// que sea llamada desde un control del frontend
 
 window.addEventListener('load', () => {
 	grid.refreshItems().layout();
 	document.getElementById('grid').classList.add('imagenes-cargadas');
 
-	// Agregamos los listener de los enlaces para filtrar por categoria.
+	// Agrego los listener de los enlaces para filtrar por categoria.
 	const enlaces = document.querySelectorAll('#categorias a');
 	enlaces.forEach((elemento) => {
 		elemento.addEventListener('click', (evento) => {
@@ -21,13 +29,13 @@ window.addEventListener('load', () => {
 		});
 	});
 
-	// Agregamos el listener para la barra de busqueda
+	// Agrego el listener para la barra de busqueda
 	document.querySelector('#barra-busqueda').addEventListener('input', (evento) => {
 		const busqueda = evento.target.value;
 		grid.filter( (item) => item.getElement().dataset.etiquetas.includes(busqueda) );
 	});
 
-	// Agregamos listener para las imagenes
+	// Agrego listener para las imagenes
 	const overlay = document.getElementById('overlay');
 	document.querySelectorAll('.grid .item img').forEach((elemento) => {
 		elemento.addEventListener('click', () => {
