@@ -5,15 +5,20 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- fuentes de google fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+	<!-- íconos para las redes -->
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+	<!-- estilos propios de la página -->
 	<link rel="stylesheet" href="estilos.css">
+
 	<title>Portafolio - Joel Pallero</title>
 </head>
 
 <body>
 
 	<div class="contenedor">
+		<!-- Este es el encabezado, incluyendo la barra de búsqueda -->
 		<header>
 			<div class="logo">
 				<h1> Joel Pallero</h1>
@@ -30,9 +35,14 @@
 			</div>
 		</header>
 
+		<!-- Creamos una sección donde van a estar las imágenes -->
 		<section class="grid" id="grid">
+			<!-- La categoría sirve para identificar cada item
+			la eqitqueta es para los filtros al igual que la categoría -->
 			<div class="item" data-categoria="desktop" data-etiquetas="desktop inicio menu tabla"
 				data-descripcion="Formulario Inicial de una aplicación cercana a una billetera virtual, pero solo para realizar cuentas">
+				<!-- La descripción es la que se visualiza en la ventana modal -->
+				<!-- Acá ya generamos el div para agregar cada imagen -->
 				<div class="item-contenido">
 					<img src="img/inicio.png" alt="">
 				</div>
@@ -102,6 +112,8 @@
 			</div>
 		</section>
 
+		<!-- Acá es donde creamos la ventana modal para 
+			poder mostrar en grande cada imagen -->
 		<section class="overlay" id="overlay">
 			<div class="contenedor-img">
 				<button id="btn-cerrar-popup"><i class="fas fa-times"></i></button>
@@ -110,6 +122,7 @@
 			<p class="descripcion"></p>
 		</section>
 
+		<!-- creo el footer donde van a estar los íconos de las redes sociales -->
 		<footer class="contenedor">
 			<div class="redes-sociales">
 				<div class="contenedor-icono">
@@ -129,13 +142,16 @@
 				</div>
 			</div>
 			<div class="creado-por">
-				<p>Sitio diseñado por <a href="#">Joel Pallero</a></p>
+				<p>Sitio diseñado por <a href="https://www.youtube.com/elpampero1000">Joel Pallero</a></p>
 			</div>
 		</footer>
 	</div>
 
+
+	<!-- Este script sirve para utilizar las librerias Muuri para la grilla -->
 	<script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
 	<script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+	<!-- Acá esctoy linkeando el archivo js hecho para esta web -->
 	<script src="main.js"></script>
 </body>
 
